@@ -33,27 +33,6 @@ This project is ideal for understanding:
 
 ---
 
-## 🗂 Project Structure
-
-StudentCourseProject
-│
-├── src/main/java
-│ ├── com.example.entity
-│ │ ├── Student.java
-│ │ └── Course.java
-│ │
-│ ├── com.example.util
-│ │ └── HibernateUtil.java
-│ │
-│ └── com.example
-│ └── MainApp.java
-│
-├── pom.xml
-└── hibernate.cfg.xml
-
-
----
-
 ## 🗄 Database Design
 
 ### 1️⃣ student Table
@@ -91,44 +70,7 @@ StudentCourseProject
 
 ### ✅ Student Entity
 
-```java
-@Entity
-@Table(name = "student")
-public class Student {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    private String name;
-
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(
-        name = "student_course",
-        joinColumns = @JoinColumn(name = "student_id"),
-        inverseJoinColumns = @JoinColumn(name = "course_id")
-    )
-    private Set<Course> courses = new HashSet<>();
-
-    // getters and setters
-}
-
-✅ Course Entity
-@Entity
-@Table(name = "course")
-public class Course {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    private String courseName;
-
-    @ManyToMany(mappedBy = "courses")
-    private Set<Student> students = new HashSet<>();
-
-    // getters and setters
-}
+---
 
 🚀 Features
 
@@ -139,8 +81,11 @@ public class Course {
 ✔ Bidirectional Relationship
 ✔ Automatic Join Table Creation
 ✔ Hibernate Session Management
+Aspiring Java Full-Stack Developer
+Passionate about Backend Development & Database Design
 
-▶ How to Run the Project
+---
+How to Run the Project
 
 1️⃣ Clone the repository:
 

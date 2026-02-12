@@ -89,7 +89,7 @@ How to Run the Project
 
 1️⃣ Clone the repository:
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/PeetlaMahesh123/ManyToManyHibernate.git
 
 
 2️⃣ Open the project in Eclipse or IntelliJ
